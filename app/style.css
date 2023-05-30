@@ -207,7 +207,8 @@ h3 {
 
 .main {
     float: left;
-    width: 80%;
+    /* width: 80%; */
+    width: 100%;
     padding: 0 20px;
 }
 
@@ -244,7 +245,11 @@ h3 {
 
 @media only screen and (min-width: 551px) {
 /* For mobile phones: */
-    .menu, .main, .right {
+    /* .menu, .main, .right {
+        width: 100%;
+        display: flex;
+    } */
+    .menu, .right {
         width: 100%;
         display: flex;
     }
