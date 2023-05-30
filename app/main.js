@@ -40,7 +40,9 @@ function getByFoldersForTrending (_folderList) {
 }
 
 function trendingVideoElement(videos) {
-    document.getElementById('image-slider').innerHTML = null;
+    const imageSlider = document.getElementById('image-slider');
+    imageSlider.innerHTML = null;
+    imageSlider.style.visibility = 'hidden';
     var i = 0;
     var stop = videos && videos.length < 5 ? videos.length : 5;
     for (i = 0; i < stop; i++) { 
@@ -84,8 +86,9 @@ function trendingVideoElement(videos) {
         document.getElementById('image-slider-button').appendChild(button);
     }
     setTimeout(() => {
-        refreshCSS();
-    }, 300);
+        // refreshCSS();
+        imageSlider.style.visibility = 'visible';
+    }, 2000);
 }
 function toggleSidebar(e) {
     const element = document.getElementById('sidebar');
